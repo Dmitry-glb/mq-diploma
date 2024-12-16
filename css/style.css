@@ -1,16 +1,16 @@
 @font-face {
   font-family: "OpenSans";
-  src: url("fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("fonts/OpenSans-Regular.woff") format("woff"),
-    url("fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "OpenSans";
-  src: url("fonts/OpenSans-Bold.woff2") format("woff2"),
-    url("fonts/OpenSans-Bold.woff") format("woff"),
-    url("fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff"),
+    url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -57,7 +57,7 @@ main {
 .header {
   background: gray;
   width: 100%;
-  background-image: url("images/banner-bg.jpg");
+  background-image: url("../images/banner-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,21 +451,21 @@ main {
 }
 
 .footer__social-link_dribbble {
-  background-image: url("svg/001-dribbble.svg");
+  background-image: url("../svg/001-dribbble.svg");
   background-size: cover;
   width: 2rem;
   height: 2rem;
 }
 
 .footer__social-link_pinterest {
-  background-image: url("svg/001-pinterest.svg");
+  background-image: url("../svg/001-pinterest.svg");
   background-size: cover;
   width: 2rem;
   height: 2rem;
 }
 
 .footer__social-link_tumblr {
-  background-image: url("svg/003-tumblr.svg");
+  background-image: url("../svg/003-tumblr.svg");
   background-size: cover;
   width: 2rem;
   height: 2rem;
@@ -537,19 +537,19 @@ main {
 }
 
 .trends__card-first {
-  background-image: url("images/trend1.jpg");
+  background-image: url("../images/trend1.jpg");
 }
 
 .trends__card-second {
-  background-image: url("images/trend2.jpg");
+  background-image: url("../images/trend2.jpg");
 }
 
 .trends__card-third {
-  background-image: url("images/trend3.jpg");
+  background-image: url("../images/trend3.jpg");
 }
 
 .trends__card-four {
-  background-image: url("images/trend4.jpg");
+  background-image: url("../images/trend4.jpg");
 }
 
 .products__cards {
@@ -684,7 +684,7 @@ main {
   background-color: #f4f7f6;
   color: rgba(0, 0, 0, 0.5);
   margin-top: 1rem;
-  background-image: url("svg/form-arrows.svg");
+  background-image: url("../svg/form-arrows.svg");
   background-repeat: no-repeat, repeat;
   background-position: right 1rem top 50%;
   background-size: 0.65em auto, 100%;
@@ -745,7 +745,7 @@ main {
 @media (max-width: 1200px) {
   .header {
     padding: 0 3rem;
-    background-image: url("images/banner-bg-tablet.jpg");
+    background-image: url("../images/banner-bg-tablet.jpg");
   }
 
   .header__title {
@@ -824,7 +824,7 @@ main {
 
 @media (max-width: 640px) {
   .header {
-    background-image: url("images/banner-mobile.jpg");
+    background-image: url("../images/banner-mobile.jpg");
     min-height: 100vh;
     background-position: top right 70%;
     background-size: cover;

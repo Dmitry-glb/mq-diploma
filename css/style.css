@@ -331,6 +331,7 @@ main {
   box-sizing: border-box;
   min-width: 0;
   height: 4.8rem;
+  margin-bottom: 5rem;
 }
 
 .search-btn {

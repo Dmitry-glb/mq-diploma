@@ -157,6 +157,7 @@ main {
   display: flex;
   gap: 3rem;
   margin-bottom: 5.6rem;
+  flex-direction: column;
 }
 
 .post:last-child {

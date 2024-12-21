@@ -164,13 +164,13 @@ main {
 }
 
 .post__image {
-  max-width: 30rem;
+  max-width: 100%;
 }
 
 .post__container {
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
+  max-width: 100%;
 }
 
 .tags {
@@ -299,11 +299,6 @@ main {
   overflow: hidden;
 }
 
-.search {
-  display: flex;
-  margin-bottom: 6.4rem;
-}
-
 .input-place {
   box-sizing: border-box;
   padding-left: 1.5rem;
@@ -311,18 +306,31 @@ main {
   background: #f4f7f6;
 }
 
+.sidebar__search {
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.search__label {
+  flex: 1;
+}
+
 .search-place {
   width: 100%;
-  padding-right: 4rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  min-width: 0;
   height: 4.8rem;
 }
 
-.search-place:focus {
-  outline: 0.1rem solid #b59f5b;
-}
-
 .search-btn {
-  min-width: 4.8rem;
+  flex-shrink: 0;
+  width: 4.8rem;
   height: 4.8rem;
   border: none;
   background-color: #b59f5b;
@@ -332,9 +340,8 @@ main {
   background-size: 1.8rem;
 }
 
-.search-btn:hover {
-  background-color: #323232;
-  cursor: pointer;
+.email {
+  width: 100%;
 }
 
 .email-place {
@@ -355,7 +362,7 @@ main {
 }
 
 .email-btn {
-  width: 27.2rem;
+  width: 100%;
   height: 4.8rem;
   margin-bottom: 6.2rem;
 }
@@ -525,7 +532,7 @@ main {
 }
 
 .trends__card-text {
-  width: 70%;
+  max-width: 80%;
   outline: 0.3rem solid rgba(181, 159, 91, 0.5);
   outline-offset: 2rem;
   font-size: 2rem;
@@ -554,14 +561,14 @@ main {
 
 .products__cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .products__cards-card {
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
+  width: 30rem;
   margin-bottom: 6.5rem;
 }
 
@@ -623,6 +630,10 @@ main {
 .products__btn {
   width: 14rem;
   height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .popup-feedback__hidden {
@@ -777,6 +788,24 @@ main {
     flex-direction: column;
   }
 
+  .post__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .post__image-link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .post__image {
+    max-width: 100%;
+    height: auto;
+  }
+
   .post__title {
     font-size: 1.7rem;
   }
@@ -786,21 +815,17 @@ main {
   }
 
   .products__cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 1rem;
   }
 
   .products__cards-card {
-    display: flex;
-    flex-direction: column;
-    max-width: 27rem;
-    margin-bottom: 6.5rem;
+    /* padding: 0 2rem; */
+    width: 45%;
   }
 
   .products__cards-img {
     margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .products__cards-img picture img {
@@ -819,6 +844,7 @@ main {
     left: -2rem;
     right: -2rem;
     height: 28rem;
+    margin: 0 1rem;
   }
 }
 
@@ -892,23 +918,12 @@ main {
     z-index: 5;
   }
 
-  .post__image {
-    max-width: 100%;
-  }
-
-  .post__container {
-    display: flex;
-    flex-direction: column;
-    max-width: 37rem;
-  }
-
   .post__info {
     margin-bottom: 2rem;
   }
 
   .sidebar {
-    max-width: 38rem;
-    width: 100%;
+    max-width: 100%; // 38
   }
 
   .sidebar__title {
@@ -916,26 +931,24 @@ main {
   }
 
   .search {
-    justify-content: center;
     margin-bottom: 4rem;
   }
 
   .email-btn {
     max-width: 100%;
-    width: 27rem;
+    width: 100%;
   }
 
   .email {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
-  .products__cards {
-    max-width: 100%;
+  .products__cards-card {
+    width: 100%;
     margin: 0 auto;
     justify-content: center;
-    width: 50rem;
+    margin-bottom: 5rem;
   }
 
   .products__cards-text {
@@ -955,5 +968,36 @@ main {
   .footer {
     max-width: 100%;
     padding: 0 0.5rem;
+  }
+
+  .products__cards-text::before {
+    position: absolute;
+    content: "";
+    border: 0.3rem solid rgba(181, 159, 91, 0.5);
+    top: -6rem;
+    left: -2rem;
+    right: -2rem;
+    height: 25rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+  .trends__cards {
+    flex-wrap: nowrap;
+  }
+
+  .trends__card {
+    width: 25%;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .trends__cards {
+    flex-wrap: wrap;
+  }
+
+  .trends__card {
+    width: calc(50% - 0.2rem);
   }
 }

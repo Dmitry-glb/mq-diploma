@@ -329,6 +329,10 @@ main {
   height: 4.8rem;
 }
 
+.search-place:focus {
+  outline: 0.1rem solid #b59f5b;
+}
+
 .search-btn {
   flex-shrink: 0;
   width: 4.8rem;
